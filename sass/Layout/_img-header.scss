@@ -1,0 +1,12 @@
+.img-header{
+    height:350px;
+    width:100%;
+    overflow-y: hidden;
+    @include posCentre;
+    img{ 
+        object-fit: cover;
+    }
+   @media(max-width:766px)
+   { img{ width: 100%;}
+}
+}

@@ -1,0 +1,107 @@
+.page-menu-grid{
+    padding-left: 10px;
+    padding-right: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+
+    @media(max-width:766px){ 
+        grid-template-columns: 1fr;
+        display: block;
+    }   
+    @media(max-width:1000px){ 
+        grid-template-columns: 2fr;
+        display: block;
+    }
+}
+.group-plats{
+    width: 30%;
+    padding-top: 20px;
+    padding-left: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+.menu-composant{
+    height: 75px;
+    display:flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: $colour-white;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 2px 10px 0px #bdbbbb;
+    overflow: hidden;
+    white-space: nowrap;
+    &:hover {
+        .check-plat{
+       right: 0;    }
+       i{animation: check-spin 0.5s ease-in-out;}
+        
+        .prix-plat{
+        right: 2rem;
+        width: 25%;
+        
+        }
+        .plat{
+        width: 65%;
+        overflow: hidden;
+       
+        }
+    }
+    @media (max-widh:766px) {
+        &:active .check-plat{
+            right: 0;
+         }
+    }
+}
+@keyframes check-spin {
+    0%{transform:rotate(0);}
+    50%{transform:rotate(180deg);}
+    100%{transform:rotate(0);}
+}
+    
+
+.plat{
+    width: 80%;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.5s;
+}
+.prix-plat{
+    position: relative;
+    padding-bottom: 8px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    right: -7%;
+    width: 15%;
+    display: flex;
+    font-weight: bold;
+    z-index: 1;
+    transition: all 0.5s;
+}
+.check-plat{
+    width: 15%;
+    i{ 
+        color: $colour-white;
+    }
+    background-color: $colour-green;
+    position: relative;
+    right: -15%;
+    @include posCentre ;
+    transition: all 0.5s;
+}
+
+.type-plats{
+    padding-left: 10px;
+    margin-bottom: -15px;
+}
+.trait{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    height: 10px;
+    color: #99E2D0;
+    margin-top: 0;
+}
+
