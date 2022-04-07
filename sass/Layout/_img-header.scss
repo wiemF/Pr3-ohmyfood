@@ -5,8 +5,10 @@
     @include posCentre;
     img{ 
         object-fit: cover;
+        height: 350px;
+        width: 100%;
     }
-   @media(max-width:766px)
+   @media(max-width:$break-point)
    { img{ width: 100%;}
 }
 }

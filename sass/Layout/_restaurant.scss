@@ -15,7 +15,7 @@
     height: 70px;
     position: absolute;
     top: 405px;
-    @media(max-width:766px)
+    @media(max-width:$break-point)
     { width: 100%;
         background-color: rgb(241, 238, 238);}
 }

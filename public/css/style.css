@@ -1,3 +1,22 @@
+@keyframes check-spin {
+  0% {
+    transform: rotate(300);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes apaarition-menu {
+  0% {
+    transform: translatey(80%);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
 *,
 *::after,
 *::before {
@@ -99,7 +118,6 @@ textarea {
 
 button {
   font-family: "Roboto", sans-serif;
-  font-weight: 900;
   font-size: 2.75rem;
   position: relative;
 }
@@ -109,9 +127,8 @@ button {
   cursor: pointer;
   width: max-content;
   font-size: large;
-  font-weight: bold;
   margin-top: 15px;
-  margin-bottom: 15x;
+  margin-bottom: 15px;
   box-shadow: 0px 2px 10px 0px #dfdbdb02;
   height: 60px;
   transition-property: transform;
@@ -122,7 +139,7 @@ button {
 }
 .btn--colore {
   width: max-content;
-  font-size: x-large;
+  font-size: large;
   padding-left: 40px;
   padding-right: 40px;
   color: #fff;
@@ -139,16 +156,18 @@ button {
     background: linear-gradient(#fface8, #ae80e5);
     box-shadow: 0px 2px 10px 0px #7b7b7b;
     transition: all 0.5s ease-in;
+    cursor: grab;
   }
 }
 .btn--incolore {
   width: 25%;
+  font-weight: bold;
   background: #f6f6f6;
   color: black;
   border-radius: 20px;
   margin-bottom: auto;
 }
-@media (max-width: 760px) {
+@media (max-width: 766px) {
   .btn--incolore {
     width: 100%;
     height: 80px;
@@ -208,7 +227,7 @@ button {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 800ms;
+  transition: all 2s;
 }
 .coeur:hover i.fas {
   display: flex;
@@ -308,7 +327,6 @@ button {
   cursor: pointer;
 }
 .form__field input {
-  width: fit-content;
   background: transparent;
   border: none;
   color: black;
@@ -350,9 +368,26 @@ button {
   width: 100%;
   background-color: #d3d8d6;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.emplacement .emp-details {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+  width: auto;
+  display: flex;
+}
+.emplacement .emp-details input {
+  padding-left: 1rem;
+}
+.emplacement .emp-details i {
+  width: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: large;
+  margin-right: 1rem;
 }
 
 #fonctionnement {
@@ -373,7 +408,7 @@ button {
   padding-right: 20px;
   padding-bottom: 40px;
 }
-@media (max-width: 760px) {
+@media (max-width: 766px) {
   #restaurant {
     flex-direction: column;
     display: flex;
@@ -470,7 +505,7 @@ button {
   padding-right: 30px;
   justify-content: space-between;
 }
-@media (max-width: 760px) {
+@media (max-width: 766px) {
   .liste-boutton {
     flex-direction: column;
   }
@@ -483,7 +518,7 @@ button {
   align-items: center;
   background: transparent;
 }
-@media (max-width: 884px) {
+@media (max-width: 766px) {
   .liste-boutton {
     padding-left: 10px;
     padding-right: 10px;
@@ -500,6 +535,8 @@ button {
 }
 .img-header img {
   object-fit: cover;
+  height: 350px;
+  width: 100%;
 }
 @media (max-width: 766px) {
   .img-header img {
@@ -534,7 +571,7 @@ button {
   font-size: medium;
   font-weight: bold;
 }
-@media (max-width: 760px) {
+@media (max-width: 766px) {
   .card {
     width: 97%;
     margin-left: 0;
@@ -574,36 +611,77 @@ button {
   align-items: center;
 }
 
-.page-menu-grid {
+.page-menu {
   padding-left: 10px;
   padding-right: 15px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  display: flex;
 }
 @media (max-width: 766px) {
-  .page-menu-grid {
-    grid-template-columns: 1fr;
+  .page-menu {
     display: block;
-  }
-}
-@media (max-width: 1000px) {
-  .page-menu-grid {
-    grid-template-columns: 2fr;
-    display: block;
+    flex-direction: column;
   }
 }
 
 .group-plats {
-  width: 30%;
+  width: 33%;
   padding-top: 20px;
   padding-left: 10px;
   margin-top: 20px;
   justify-content: center;
+  animation: apaarition-menu 3s;
+}
+.group-plats:nth-child(1) {
+  animation-delay: 150ms;
+}
+.group-plats:nth-child(2) {
+  animation-delay: 300ms;
+}
+.group-plats:nth-child(3) {
+  animation-delay: 450ms;
+}
+.group-plats:nth-child(4) {
+  animation-delay: 600ms;
+}
+.group-plats:nth-child(5) {
+  animation-delay: 750ms;
+}
+.group-plats:nth-child(6) {
+  animation-delay: 900ms;
+}
+.group-plats:nth-child(7) {
+  animation-delay: 1050ms;
+}
+.group-plats:nth-child(8) {
+  animation-delay: 1200ms;
+}
+.group-plats:nth-child(9) {
+  animation-delay: 1350ms;
+}
+.group-plats:nth-child(10) {
+  animation-delay: 1500ms;
+}
+.group-plats:nth-child(11) {
+  animation-delay: 1650ms;
+}
+.group-plats:nth-child(12) {
+  animation-delay: 1800ms;
+}
+.group-plats:nth-child(13) {
+  animation-delay: 1950ms;
+}
+.group-plats:nth-child(14) {
+  animation-delay: 2100ms;
+}
+@media (max-width: 766px) {
+  .group-plats {
+    width: 100%;
+  }
 }
 
 .menu-composant {
-  height: 75px;
+  cursor: pointer;
+  height: fit-content;
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -611,12 +689,20 @@ button {
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 2px 10px 0px #bdbbbb;
   overflow: hidden;
+}
+.menu-composant .description-plat {
   white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 16px;
+}
+.menu-composant .nom-plat {
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
 }
 .menu-composant:hover .check-plat {
   right: 0;
 }
-.menu-composant:hover i {
+.menu-composant:hover .check-plat i {
   animation: check-spin 0.5s ease-in-out;
 }
 .menu-composant:hover .prix-plat {
@@ -625,29 +711,28 @@ button {
 }
 .menu-composant:hover .plat {
   width: 65%;
+}
+.menu-composant:hover .description-plat {
   overflow: hidden;
+  white-space: nowrap;
+}
+.menu-composant:hover .nom-plat {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media (max-widh: 766px) {
   .menu-composant:active .check-plat {
     right: 0;
   }
+  .menu-composant:active .check-plat i {
+    animation: check-spin 0.5s ease-in-out;
+  }
 }
 
-@keyframes check-spin {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
 .plat {
   width: 80%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  overflow: hidden;
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -655,12 +740,12 @@ button {
 }
 
 .prix-plat {
+  width: 15%;
   position: relative;
   padding-bottom: 8px;
   justify-content: flex-end;
   align-items: flex-end;
   right: -7%;
-  width: 15%;
   display: flex;
   font-weight: bold;
   z-index: 1;
@@ -688,7 +773,7 @@ button {
 
 .trait {
   padding-left: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   height: 10px;
   color: #99E2D0;
   margin-top: 0;
@@ -829,9 +914,8 @@ button {
   cursor: pointer;
   width: max-content;
   font-size: large;
-  font-weight: bold;
   margin-top: 15px;
-  margin-bottom: 15x;
+  margin-bottom: 15px;
   box-shadow: 0px 2px 10px 0px #dfdbdb02;
   height: 60px;
   transition-property: transform;
@@ -840,7 +924,7 @@ button {
 }
 .about__btn--colore {
   width: max-content;
-  font-size: x-large;
+  font-size: large;
   padding-left: 40px;
   padding-right: 40px;
   color: #fff;
@@ -857,16 +941,18 @@ button {
     background: linear-gradient(#fface8, #ae80e5);
     box-shadow: 0px 2px 10px 0px #7b7b7b;
     transition: all 0.5s ease-in;
+    cursor: grab;
   }
 }
 .about__btn--incolore {
   width: 25%;
+  font-weight: bold;
   background: #f6f6f6;
   color: black;
   border-radius: 20px;
   margin-bottom: auto;
 }
-@media (max-width: 760px) {
+@media (max-width: 766px) {
   .about__btn--incolore {
     width: 100%;
     height: 80px;
@@ -963,9 +1049,8 @@ button {
   cursor: pointer;
   width: max-content;
   font-size: large;
-  font-weight: bold;
   margin-top: 15px;
-  margin-bottom: 15x;
+  margin-bottom: 15px;
   box-shadow: 0px 2px 10px 0px #dfdbdb02;
   height: 60px;
   transition-property: transform;
@@ -979,7 +1064,7 @@ button {
 }
 .project__btn--colore {
   width: max-content;
-  font-size: x-large;
+  font-size: large;
   padding-left: 40px;
   padding-right: 40px;
   color: #fff;
@@ -996,16 +1081,18 @@ button {
     background: linear-gradient(#fface8, #ae80e5);
     box-shadow: 0px 2px 10px 0px #7b7b7b;
     transition: all 0.5s ease-in;
+    cursor: grab;
   }
 }
 .project__btn--incolore {
   width: 25%;
+  font-weight: bold;
   background: #f6f6f6;
   color: black;
   border-radius: 20px;
   margin-bottom: auto;
 }
-@media (max-width: 760px) {
+@media (max-width: 766px) {
   .project__btn--incolore {
     width: 100%;
     height: 80px;

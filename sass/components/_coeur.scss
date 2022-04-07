@@ -19,7 +19,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         opacity: 0;
-        transition: all 800ms;
+        transition: all 2s;
     }
     &:hover{
         i.fas{
@@ -31,7 +31,7 @@
            opacity: 0;
         }
    }
-   @media (max-widh:766px) {
+   @media (max-widh:$break-point) {
        &:active{
            cursor: grab;
        i.fas{

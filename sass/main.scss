@@ -2,6 +2,7 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
+@import "./utils/animation";
 
 @import "./base/base";
 @import "./base/typography";
@@ -19,7 +20,7 @@
 @import "./Layout/card";
 @import "./Layout/baspage";
 @import "./Layout/container-logo-rest";
-@import "./Layout/page-menu-grid";
+@import "./Layout/page-menu";
 @import "./Layout/restaurant";
 
 

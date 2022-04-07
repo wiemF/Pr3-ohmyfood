@@ -3,7 +3,7 @@
    padding-left: 30px;
    padding-right: 30px;
    justify-content: space-between;
-   @media (max-width:760px) {
+   @media (max-width:$break-point) {
        flex-direction: column;
    }
    
@@ -14,7 +14,7 @@
        background: transparent;
    }
 
-   @media (max-width:884px){
+   @media (max-width:$break-point){
     padding-left: 10px;
     padding-right: 10px;
     }
