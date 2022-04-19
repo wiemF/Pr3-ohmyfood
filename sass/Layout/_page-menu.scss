@@ -14,18 +14,21 @@
     padding-left: 10px;
     margin-top: 20px;
     justify-content: center;
-    @for $i from 1 to 15{
-        &:nth-child(#{$i}){
-            animation-delay: 150ms*$i;
-        }
-    }
-    animation:apaarition-menu 3s;
+    
     @media(max-width:$break-point){ 
         width: 100%;
      }  
 }
 .menu-composant{
-    
+    &::before{
+       opacity: 0; 
+    }
+    @for $i from 1 to 15{
+        &:nth-child(#{$i}){
+            animation-delay: 200ms*$i;
+        }
+    }
+    animation:apaarition-menu 2s;
     cursor: pointer;
     height: fit-content;
     display:flex;

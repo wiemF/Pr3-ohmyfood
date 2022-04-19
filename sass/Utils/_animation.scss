@@ -10,11 +10,12 @@
     }
 }
 @keyframes apaarition-menu {
-    0%{
-        transform:translatey(80%);
+    0%{ opacity: 0;
+        transform:translatey(150%);
         
     } 
     100%{
+        opacity: 1;
         transform:translatey(0);
         
     }
